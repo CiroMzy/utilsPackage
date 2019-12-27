@@ -1,0 +1,19 @@
+{
+  "name": "ciroMajsUtils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CiroMzy/utilsPackage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CiroMzy/utilsPackage/issues"
+  },
+  "homepage": "https://github.com/CiroMzy/utilsPackage#readme"
+}
