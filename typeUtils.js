@@ -26,5 +26,11 @@ module.exports = {
     isString: (v) => {
         return typeof v === "string"
     },
+    isJSON: (v) => {
+        if (v instanceof Object && v.prototype === undefined) {
+            return true
+        }
+        return false
+    },
 
 }

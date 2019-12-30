@@ -1,26 +1,30 @@
+/************************
+ * 校验类
+ *  类型校验
+ *  正则校验
+ *
+ */
+
 const regUtils = require('./regUtils')
 const typeUtils = require('./typeUtils')
 const objUtils = require('./objUtils')
 
+const checkUtils = {}
 
-function CheckUtils() {
-    this.initRegUtils()
-}
-CheckUtils.prototype.initRegUtils = function () {
-    const utils = objUtils.extend(regUtils, typeUtils)
-    console.log('utils')
-    console.log(utils)
-    for (let key in utils) {
-        this[key] = (value) => {
-            if (typeUtils.isUndef(value)) {
-                return false
-            }
-            value += ''
-            return regUtils[key].test(value)
+
+Object.keys(regUtils).forEach(key => {
+    checkUtils[key] = (value) => {
+        if (typeUtils.isUndef(value)) {
+            return false
         }
+        value += ''
+        return regUtils[key].test(value)
     }
+})
 
-}
+Object.keys(typeUtils).forEach(key => {
+    checkUtils[key] = typeUtils[key]
+})
 
 
-module.exports = new CheckUtils()
+module.exports = checkUtils
