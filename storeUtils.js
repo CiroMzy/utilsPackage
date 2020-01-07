@@ -1,9 +1,11 @@
-
+/*********************
+ * 存储处理
+ */
 // 格式校验工具
 const checkUtils = require('./checkUtils.js')
 const storage = window.localStorage
 
-module.exports = {
+export default  {
 
     /***************************************************************************************************
      *                                          COOKIE 操作类

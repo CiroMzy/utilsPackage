@@ -42,9 +42,9 @@ function preventDefault (event) {
 }
 
 
-module.exports = {
-    addEvent: addEvent,
-    getEvent: getEvent,
-    getTarget: getTarget,
-    preventDefault: preventDefault
+export default  {
+    addEvent,
+    getEvent,
+    getTarget,
+    preventDefault
 }

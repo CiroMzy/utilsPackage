@@ -1,5 +1,9 @@
+/*********************
+ * 类型校验
+ *
+ */
 
-module.exports = {
+export default {
     isUndef: (v) => {
         return v === undefined || v === null
     },
@@ -31,6 +35,5 @@ module.exports = {
             return true
         }
         return false
-    },
-
+    }
 }

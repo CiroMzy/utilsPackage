@@ -46,7 +46,7 @@ const extend =  (obj1, obj2) => {
     })
     return obj1
 }
-module.exports = {
+export default {
     deepCopy,
     find,
     extend

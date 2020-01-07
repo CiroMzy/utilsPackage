@@ -1,9 +1,8 @@
 /***************
  * 正则列表
- *
  */
 
-module.exports =  {
+export default {
     isNotEmpty: /^[\s\S]+$/,    // 非空
     isMobile: /^1[345678]\d{9}$/,    // 手机号
     isMobileCode: /^[0-9]{4}$/,    // 手机验证码

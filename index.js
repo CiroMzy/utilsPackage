@@ -1,15 +1,29 @@
+
 // 对象操作工具
-const objUtils = require('./objUtils.js')
+import objUtils from './objUtils.js'
 // 格式校验工具
-const checkUtils = require('./checkUtils.js')
+import checkUtils from './checkUtils.js'
 // 存储操作工具
-const storeUtils = require('./storeUtils.js')
+import storeUtils from './storeUtils.js'
+// 简单操作工具
+import simpleUtils from './simpleUtils.js'
+// dom操作
+import domUtils from './domUtils.js'
 
+window.mzyUtils = (function mzyEasyUtils () {
+    var utils
+    return (function () {
+        if (!utils) {
+            utils = {
+                ...checkUtils,
+                ...storeUtils,
+                ...objUtils,
+                ...simpleUtils,
+                ...domUtils
+            }
 
-
-module.exports = {
-    check: checkUtils,
-    store: storeUtils,
-    object: objUtils
-
-}
+        }
+        return utils
+    })()
+})()
+export default window.mzyUtils

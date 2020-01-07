@@ -1,13 +1,15 @@
 /************************
+ *
  * 校验类
  *  类型校验
  *  正则校验
  *
  */
 
-const regUtils = require('./regUtils')
-const typeUtils = require('./typeUtils')
-const objUtils = require('./objUtils')
+import regUtils from './regUtils.js'
+import typeUtils from './typeUtils.js'
+import objUtils from './objUtils.js'
+
 
 const checkUtils = {}
 
@@ -26,5 +28,5 @@ Object.keys(typeUtils).forEach(key => {
     checkUtils[key] = typeUtils[key]
 })
 
+export default checkUtils
 
-module.exports = checkUtils
