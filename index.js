@@ -7,8 +7,10 @@ import checkUtils from './checkUtils.js'
 import storeUtils from './storeUtils.js'
 // 简单操作工具
 import simpleUtils from './simpleUtils.js'
-// dom操作
+// dom操作工具
 import domUtils from './domUtils.js'
+// 设计模式
+import modeUtils from './modeUtils.js'
 
 window.mzyUtils = (function mzyEasyUtils () {
     var utils
@@ -19,9 +21,9 @@ window.mzyUtils = (function mzyEasyUtils () {
                 ...storeUtils,
                 ...objUtils,
                 ...simpleUtils,
-                ...domUtils
+                ...domUtils,
+                ...modeUtils
             }
-
         }
         return utils
     })()
